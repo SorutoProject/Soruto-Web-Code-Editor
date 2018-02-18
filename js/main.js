@@ -20,23 +20,29 @@ function sMenu(mname){
 		submenu.style.display = "none";
 	}else{
 		//サブメニューの項目設定
+		//width:100%になるので、<br>は不要
 		if(mname == "file"){
 			submenu.innerHTML = `
-			<a href="#" onclick="NewFile();">新規作成</a><br>------------------<br>
-			<a href="#" onclick="openfile()">開く</a><br>
-			<a href="#" id="slink" onclick="dfile('slink');">保存</a><br>
+			<a href="#" onclick="NewFile();" class="sub">新規作成</a>------------------<br>
+			<a href="#" onclick="openfile()" class="sub">ファイルを開く</a>
+			<a href="#" id="slink" onclick="dfile('slink');" class="sub">保存(ダウンロード)</a>
 			`;
 		}
 		else if(mname == "help"){
 			submenu.innerHTML = `
-			<a href="#" onclick="cMenu();so.modal.al('このサイトについて','<b>Soruto Web Code Editor</b><br>オープンソースの<br>Webブラウザで動くIDE<br>(c)2018 Soruto Project.');">About</a><br>
-			<a href="https://github.com/SorutoProject/Soruto-Web-Code-Editor" target="_blank">プロジェクトページ</a>
+			<a href="#" class="sub" onclick="cMenu();so.modal.al('このサイトについて','<b>Soruto Web Code Editor</b><br>オープンソースの<br>Webブラウザで動くIDE<br>(c)2018 Soruto Project.');">About</a>
+			<a href="https://github.com/SorutoProject/Soruto-Web-Code-Editor" target="_blank"  class="sub">プロジェクトページ</a>
 			`;
 		}
 		else if(mname == "tool"){
 			submenu.innerHTML = `
-			<a href="#" onclick="cMenu();cLength()">文字数カウント</a><br>
-			<a href="#" onclick="cMenu();eval(so.getVal('editor'))">JSとして実行</a>
+			<a href="#" onclick="cMenu();cLength()" class="sub">文字数カウント</a>
+			`;
+		}
+		else if(mname == "source"){
+			submenu.innerHTML = `
+			<a href="#" onclick="runJSCode();" class="sub">JSとして実行</a>
+			<a href="#" onclick="runHTML()" class="sub">HTMLとして表示</a>
 			`;
 		}
 		//設定終わり
@@ -114,4 +120,18 @@ function cLength(){
 	var byn = encodeURI(so.getVal("editor")).replace(/%[0-9A-F]{2}/g, '*').length;
 	var krb = byn / 1000;
 	so.modal.al("文字数カウント","<b>現在の文字数</b>:" + len + "<br><b>ファイルサイズ</b> " + byn + "byte(" + krb + "KB)");
+}
+//JSとして実行
+function runJSCode(){
+	cMenu();
+	try{
+	eval(so.getVal('editor'))
+	}catch(error){
+		so.modal.ms("エラー",'エディタ内のコードを実行中に<br>エラーが発生しました。<hr color="#c4c4c4">エラー内容<br>' + error + '<br><input type="button" onclick="so.modal.close()" value="閉じる">');
+	}
+}
+//HTMLを別タブでdataで開く
+function runHTML(){
+	var source = so.getVal("editor");
+	window.open("data:text/html," + source,"_blank")
 }
