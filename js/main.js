@@ -22,21 +22,23 @@ function sMenu(mname){
 		//サブメニューの項目設定
 		if(mname == "file"){
 			submenu.innerHTML = `
-			<a href="#" onclick="NewFile();">新規作成</a><br>
+			<a href="#" onclick="NewFile();">新規作成</a><br>------------------<br>
+			<a href="#" onclick="openfile()">開く</a><br>
 			<a href="#" id="slink" onclick="dfile('slink');">保存</a><br>
-			<a href="#" onclick="openfile()">開く</a>
 			`;
 		}
-		if(mname == "help"){
+		else if(mname == "help"){
 			submenu.innerHTML = `
-			<a href="#" onclick="cMenu();so.modal.al('このサイトについて','<b>Soruto Web Code Editor</b><br>オープンソースの<br>Webブラウザで動くIDE<br>(c)2018 Soruto Project.');">About</a>
+			<a href="#" onclick="cMenu();so.modal.al('このサイトについて','<b>Soruto Web Code Editor</b><br>オープンソースの<br>Webブラウザで動くIDE<br>(c)2018 Soruto Project.');">About</a><br>
+			<a href="https://github.com/SorutoProject/Soruto-Web-Code-Editor" target="_blank">プロジェクトページ</a>
 			`;
 		}
-		if(mname == "tool"){
+		else if(mname == "tool"){
 			submenu.innerHTML = `
 			<a href="#" onclick="cMenu();cLength()">文字数カウント</a>
 			`;
 		}
+		//設定終わり
 	submenu.style.display = "block";
 	}
 	
