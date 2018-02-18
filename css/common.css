@@ -19,9 +19,11 @@ a{
 	color:#fefefe;
 	text-decoration: none;
 	font-weight:bold;
+	border:gray 1px solid;
 }
 a[class="main"]{
 	color:#282A36;
+	width:auto;
 }
 input[type="button"]{
 	background:#fefefe;
@@ -40,7 +42,7 @@ input[type="button"]{
 #subMenu{
 	width:10em;
 	height:200px;
-	position:fixed;
+	position:absolute;
 	top:60px;
 	overflow:auto;
 	display:none;
