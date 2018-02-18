@@ -8,3 +8,11 @@ GitHub Pages上ですぐに利用できます。
 [今すぐ試す](https://sorutoproject.github.io/Soruto-Web-Code-Editor/)
 
 本システムは、MITライセンスで公開しています。
+
+本システムの作成にあたり、下記のライブラリを使用しました:  
+* Soruto Easy JS Builder
+* cookies.js
+
+Soruto Easy JS Builder は、Soruto Projectで独自に開発を進めているライブラリです。  
+cookies.jsは、[こちら](https://developer.mozilla.org/ja/docs/Web/API/Document/cookie)に公開されているものをコピーしたものです。  
+
