@@ -1,7 +1,7 @@
 ﻿//ページ読み込み完了時の動作
 window.onload = function(){
 	//初回訪問時に説明を表示する
-	var visited = cookies.get("sorutowcevisited");
+	var visited = Cookies.get("sorutowcevisited");
 	if(visited == "visited"){}
 	else{
 		so.modal.al("ようこそ","Soruto WCEへようこそ。<br>WCEは、ブラウザ上で動作するテキストエディタです。<br>現在β版であることにご留意ください。");
