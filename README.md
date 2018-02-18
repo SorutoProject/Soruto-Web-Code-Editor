@@ -11,8 +11,4 @@ GitHub Pages上ですぐに利用できます。
 
 本アプリの作成にあたり、下記のライブラリを使用しました:  
 * Soruto Easy JS Builder
-* cookies.js
-
-Soruto Easy JS Builder は、Soruto Projectで独自に開発を進めているライブラリです。  
-cookies.jsは、[こちら](https://developer.mozilla.org/ja/docs/Web/API/Document/cookie)に公開されているものをコピーしたものです。  
-
+* [js.cookies.js](https://github.com/js-cookie/js-cookie)
