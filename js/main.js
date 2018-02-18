@@ -15,10 +15,6 @@ window.onbeforeunload = function(e) {
 //メニューの表示・非表示
 function sMenu(mname){
 	var submenu = so.getId("subMenu");
-	var now = submenu.style.display;
-	if(now == "block"){
-		submenu.style.display = "none";
-	}else{
 		//サブメニューの項目設定
 		//width:100%になるので、<br>は不要
 		if(mname == "file"){
@@ -47,7 +43,6 @@ function sMenu(mname){
 		}
 		//設定終わり
 	submenu.style.display = "block";
-	}
 	
 }
 //メニューの非表示
