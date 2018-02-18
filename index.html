@@ -1,0 +1,23 @@
+﻿<html><head><title>Soruto Web Code Editor</title><meta charset="utf-8">
+<link rel="stylesheet" href="css/common.css">
+<script src="js/soruto_ejb-min.js"></script>
+<script src="js/main.js"></script>
+</head>
+<body>
+<div class="link" id="menu">
+Soruto WCD(IDE)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ファイル名:<input type="text" id="filename" placeholder="ファイル名..."><a href="#" onclick="so.setVal('filename','');" title="ファイル名を消す" class="main">×</a><br>
+<!--MenuBar Root-->
+
+<a href="#" onclick="sMenu('file')" class="main">ファイル</a>　<a href="#" onclick="sMenu('tool')" class="main">ツール</a>　<a href="#" onclick="sMenu('help')" class="main">ヘルプ</a>
+
+</div>
+
+<!--MenuBar SubMenu div-->
+<div id="subMenu" class="link">
+</div>
+
+<hr color="#fefefe">
+<textarea id="editor" onclick="cMenu();"></textarea>
+<!--<div id="editor" contenteditable="true" onclick="cMenu();"></div>-->
+<div id="so-modal"></div>
+</body></html>
