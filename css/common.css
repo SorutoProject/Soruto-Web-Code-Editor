@@ -19,11 +19,27 @@ a{
 	color:#fefefe;
 	text-decoration: none;
 	font-weight:bold;
-	border:gray 1px solid;
+}
+a[class="sub"]{
+	color:#fefefe;
+	text-decoration: none;
+	font-weight:bold;
+	display:block;
+	width:100%;
+}
+
+a[class="sub"]:hover{
+	background:#006fd1;
+	border-radius:3px;
 }
 a[class="main"]{
 	color:#282A36;
 	width:auto;
+}
+a[class="main"]:hover{
+	background:#006fd1;
+	border-radius:3px;
+	color:#fefefe;
 }
 input[type="button"]{
 	background:#fefefe;
@@ -40,7 +56,7 @@ input[type="button"]{
 	overflow:auto;
 }
 #subMenu{
-	width:10em;
+	width:11em;
 	height:200px;
 	position:absolute;
 	top:60px;
