@@ -112,5 +112,5 @@ function cLength(){
 	var len = so.getVal("editor").length;
 	var byn = encodeURI(so.getVal("editor")).replace(/%[0-9A-F]{2}/g, '*').length;
 	var krb = byn / 1000;
-	so.modal.al("文字数カウント","<b>現在の文字数</b>:" + len + "<br><b>ファイルサイズ</b><br> " + byn + "byte<br>(" + krb + "KB)");
+	so.modal.al("文字数カウント","<b>現在の文字数</b>:" + len + "<br><b>ファイルサイズ</b> " + byn + "byte(" + krb + "KB)");
 }
