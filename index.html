@@ -9,8 +9,8 @@
 Soruto WCD(IDE)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ファイル名:<input type="text" id="filename" placeholder="ファイル名..."><a href="#" onclick="so.setVal('filename','');" title="ファイル名を消す" class="main">×</a><br>
 <!--MenuBar Root-->
 
-<a href="#" onclick="sMenu('file')" class="main">ファイル</a>　<a href="#" onclick="sMenu('tool')" class="main">ツール</a>　<a href="#" onclick="sMenu('help')" class="main">ヘルプ</a>
-
+<a href="#" onclick="sMenu('file')" class="main">ファイル</a> <a href="#" onclick="sMenu('tool')" class="main">ツール</a> <a href="#" onclick="sMenu('source')" class="main">ソース実行</a> <a href="#" onclick="sMenu('help')" class="main">ヘルプ</a>
+<!--Advance Tools-->
 </div>
 
 <!--サブメニューはmain.js側で設定します-->
@@ -18,7 +18,7 @@ Soruto WCD(IDE)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ファイル名:<input type="
 </div>
 
 <hr color="#fefefe">
-<textarea id="editor" onclick="cMenu();"></textarea>
+<textarea id="editor" onclick="cMenu();" contextmenu="editmenu"></textarea>
 <!--<div id="editor" contenteditable="true" onclick="cMenu();"></div>-->
 <div id="so-modal"></div>
 </body></html>
