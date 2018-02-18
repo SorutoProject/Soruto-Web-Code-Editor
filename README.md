@@ -7,9 +7,9 @@ Webブラウザ上で動作する、テキスト(コード)エディタです。
 GitHub Pages上ですぐに利用できます。  
 [今すぐ試す](https://sorutoproject.github.io/Soruto-Web-Code-Editor/)
 
-本システムは、MITライセンスで公開しています。
+本アプリは、MITライセンスで公開しています。
 
-本システムの作成にあたり、下記のライブラリを使用しました:  
+本アプリの作成にあたり、下記のライブラリを使用しました:  
 * Soruto Easy JS Builder
 * cookies.js
 
