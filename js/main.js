@@ -35,7 +35,8 @@ function sMenu(mname){
 		}
 		else if(mname == "tool"){
 			submenu.innerHTML = `
-			<a href="#" onclick="cMenu();cLength()">文字数カウント</a>
+			<a href="#" onclick="cMenu();cLength()">文字数カウント</a><br>
+			<a href="#" onclick="cMenu();eval(so.getVal('editor'))">JSとして実行</a>
 			`;
 		}
 		//設定終わり
