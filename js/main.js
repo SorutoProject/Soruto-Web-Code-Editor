@@ -15,6 +15,10 @@ window.onbeforeunload = function(e) {
 //メニューの表示・非表示
 function sMenu(mname){
 	var submenu = so.getId("subMenu");
+	var now = submenu.style.display;
+	if(now == "block"){
+		submenu.style.display = "none";
+	}else{
 		//サブメニューの項目設定
 		//width:100%になるので、<br>は不要
 		if(mname == "file"){
@@ -43,6 +47,7 @@ function sMenu(mname){
 		}
 		//設定終わり
 	submenu.style.display = "block";
+	}
 	
 }
 //メニューの非表示
@@ -75,8 +80,6 @@ function dfile(aid){
 //ファイルを開く
 function openfile(){
 cMenu();
-	var con = confirm('新しくファイルを開くと、現在の編集内容が失われます。\nよろしいですか?');
-	if(con === true){
 var diaso = '<b>ファイルを選択してください</b><br><input type="file" id="selfile"><br><br><input type="button" onclick="so.modal.close();" value="キャンセル">';
 so.modal.custom(diaso);
 var fo = document.getElementById("selfile");
@@ -97,7 +100,6 @@ fo.addEventListener("change",function(evt){
 	so.modal.close();
   }
 },false);
-}
 }
 //新規作成
 function NewFile(){
