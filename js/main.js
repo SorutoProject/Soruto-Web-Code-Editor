@@ -18,28 +18,16 @@ function sMenu(mname){
 		//サブメニューの項目設定
 		//width:100%になるので、<br>は不要
 		if(mname == "file"){
-			submenu.innerHTML = `
-			<a href="#" onclick="NewFile();" class="sub">新規作成</a>------------------<br>
-			<a href="#" onclick="openfile()" class="sub">ファイルを開く</a>
-			<a href="#" id="slink" onclick="dfile('slink');" class="sub">保存(ダウンロード)</a>
-			`;
+			submenu.innerHTML ='<a href="#" onclick="NewFile();" class="sub">新規作成</a>------------------<br><a href="#" onclick="openfile()" class="sub">ファイルを開く</a><a href="#" id="slink" onclick="dfile(\'slink\');" class="sub">保存(ダウンロード)</a>';
 		}
 		else if(mname == "help"){
-			submenu.innerHTML = `
-			<a href="#" class="sub" onclick="cMenu();so.modal.al('このサイトについて','<b>Soruto Web Code Editor</b><br>オープンソースの<br>Webブラウザで動くIDE<br>(c)2018 Soruto Project.');">About</a>
-			<a href="https://github.com/SorutoProject/Soruto-Web-Code-Editor" target="_blank"  class="sub">プロジェクトページ</a>
-			`;
+			submenu.innerHTML = '<a href="#" class="sub" onclick="cMenu();so.modal.al(\'このサイトについて\',\'<b>Soruto Web Code Editor</b><br>オープンソースの<br>Webブラウザで動くIDE<br>(c)2018 Soruto Project.\');">About</a><a href="https://github.com/SorutoProject/Soruto-Web-Code-Editor" target="_blank"  class="sub">プロジェクトページ</a>';
 		}
 		else if(mname == "tool"){
-			submenu.innerHTML = `
-			<a href="#" onclick="cMenu();cLength()" class="sub">文字数カウント</a>
-			`;
+			submenu.innerHTML = '<a href="#" onclick="cMenu();cLength()" class="sub">文字数カウント</a>';
 		}
 		else if(mname == "source"){
-			submenu.innerHTML = `
-			<a href="#" onclick="runJSCode();" class="sub">JSとして実行</a>
-			<a href="#" onclick="runHTML()" class="sub">HTMLとして表示</a>
-			`;
+			submenu.innerHTML = '<a href="#" onclick="runJSCode();" class="sub">JSとして実行</a><a href="#" onclick="runHTML()" class="sub">HTMLとして表示</a>';
 		}
 		//設定終わり
 	submenu.style.display = "block";
