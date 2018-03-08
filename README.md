@@ -5,7 +5,6 @@ Webブラウザ上で動作する、テキスト(コード)エディタです。
 通常のテキストエディタの機能を実装しています。
 
 GitHub Pages上ですぐに利用できます。  
-※注意:現在、Internet Explorerでは原因不明のエラーで動作しません  
 
 [今すぐ試す](https://sorutoproject.github.io/Soruto-Web-Code-Editor/)
 
